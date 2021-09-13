@@ -13,18 +13,18 @@ import java.util.Random;
  */
 public class Personnage {
     private String nom;
-    private Integer ptVie;
-    private Integer ptMana;
-    private Integer pourcentageAtt;
-    private Integer pourcentagePar;
-    private Integer pourcentageMag;
-    private Integer pourcentageResistMag;
-    private Integer degAtt;
-    private Integer degMag;
-    private Integer distAttMax;
+    private int ptVie;
+    private int ptMana;
+    private int pourcentageAtt;
+    private int pourcentagePar;
+    private int pourcentageMag;
+    private int pourcentageResistMag;
+    private int degAtt;
+    private int degMag;
+    private int distAttMax;
     private Point2D pos;
 
-    public Personnage(String nom, Integer ptV, Integer ptM, Integer pA, Integer pP, Integer pM, Integer rM, Integer dA, Integer dM, Integer distMax, Point2D pos) {
+    public Personnage(String nom, int ptV, int ptM, int pA, int pP, int pM, int rM, int dA, int dM, int distMax, Point2D pos) {
         this.nom = nom;
         this.ptVie = ptV;
         this.ptMana = ptM;
@@ -63,7 +63,7 @@ public class Personnage {
         this.nom = value;
     }
 
-    public void setPtVie(Integer value) {
+    public void setPtVie(int value) {
         this.ptVie = value;
     }
 
@@ -71,7 +71,7 @@ public class Personnage {
         return ptVie;
     }
 
-    public void setPtMana(Integer value) {
+    public void setPtMana(int value) {
         this.ptMana = value;
     }
 
@@ -79,31 +79,31 @@ public class Personnage {
         return ptMana;
     }
 
-    public void setPourcentageAtt(Integer value) {
+    public void setPourcentageAtt(int value) {
         this.pourcentageAtt = value;
     }
 
     public Integer getPourcentageAtt() {
-        return pourcentageAtt;
+        return this.pourcentageAtt;
     }
 
-    public void setPourcentagePar(Integer value) {
+    public void setPourcentagePar(int value) {
         this.pourcentagePar = value;
     }
 
     public Integer getPourcentagePar() {
-        return pourcentagePar;
+        return this.pourcentagePar;
     }
 
-    public void setPourcentageMag(Integer value) {
+    public void setPourcentageMag(int value) {
         this.pourcentageMag = value;
     }
 
     public Integer getPourcentageMag() {
-        return pourcentageMag;
+        return this.pourcentageMag;
     }
 
-    public void setPourcentageResistMag(Integer value) {
+    public void setPourcentageResistMag(int value) {
         this.pourcentageResistMag = value;
     }
 
@@ -112,7 +112,7 @@ public class Personnage {
     }
 
     public Integer getDegAtt() {
-        return degAtt;
+        return this.degAtt;
     }
 
     public void setDegAtt(Integer value) {
@@ -124,7 +124,7 @@ public class Personnage {
     }
 
     public Integer getDegMag() {
-        return degMag;
+        return this.degMag;
     }
 
     public void setDistAttMax(Integer value) {
@@ -132,7 +132,7 @@ public class Personnage {
     }
 
     public Integer getDistAttMax() {
-        return distAttMax;
+        return this.distAttMax;
     }
 
     public void setPos(Point2D value) {
@@ -140,7 +140,7 @@ public class Personnage {
     }
 
     public Point2D getPos() {
-        return new Point2D(pos);
+        return this.pos;
     }
     
     public void deplace() {
@@ -155,14 +155,17 @@ public class Personnage {
     }
     
     public void affiche() {
-        System.out.println("Le personnage s'appelle "+this.nom);
+        System.out.println("Le personnage s'appelle "+this.nom + " et est situé à la position " + this.pos + ".");
+        
         System.out.println(this.nom+" a "+ this.ptVie+" points de vie.");
         System.out.println(this.nom+" a "+ this.ptMana+" points de mana.");
-        System.out.println(this.nom+" a "+ );
-        System.out.println(this.nom+" a "+ );
-        System.out.println(this.nom+" a "+ );
-        
-        
-        System.out.println();
+        System.out.println(this.nom+" a "+ this.degAtt+" points de dégats physique.");
+        System.out.println(this.nom+" a "+ this.degMag+" points de dégats magique.");
+        System.out.println(this.nom+" a une portée de "+ this.distAttMax+".");
+        System.out.println(this.nom+" a un pourcentage d'attaque de "+ this.pourcentageAtt +"%.");
+        System.out.println(this.nom+" a "+this.pourcentagePar + "% de chance de parer." );
+        System.out.println(this.nom+" a un pourcentage d'attaque magique de "+ this.pourcentageMag + "%.");
+        System.out.println(this.nom+" a "+this.pourcentageResistMag + "% de résistance magique." );
     }
+    
 }

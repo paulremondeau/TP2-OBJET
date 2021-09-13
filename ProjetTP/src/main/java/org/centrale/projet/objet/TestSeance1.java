@@ -12,9 +12,21 @@ package org.centrale.projet.objet;
 public class TestSeance1 {
     public static void main(String[] args) {
         
-        Point2D ici = new Point2D(4,5);
         
-        Archer a = new Archer("jackkk", 10, 20, 5, 0, 5, 10, 0, 20, ici, 32);
+        World monde = new World();
+        monde.creeMondeAlea();
+        
+        monde.robin.affiche();
+        System.out.println("\n");
+        
+        monde.peon.affiche();
+        System.out.println("\n");
+        
+        monde.bug1.affiche();
+        System.out.println("\n");
+        
+        monde.bug2.affiche();
+        System.out.println("\n");
         
     }
     

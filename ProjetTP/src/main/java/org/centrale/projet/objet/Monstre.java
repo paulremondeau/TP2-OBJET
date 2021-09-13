@@ -5,19 +5,21 @@
  */
 package org.centrale.projet.objet;
 
+import java.util.Random;
+
 /**
  *
  * @author bodet
  */
 public class Monstre {
     
-    private Integer ptVie;
-    private Integer pourcentageAtt;
-    private Integer pourcentagePar;
-    private Integer degAtt;
+    private int ptVie;
+    private int pourcentageAtt;
+    private int pourcentagePar;
+    private int degAtt;
     private Point2D pos;
 
-    public Monstre(Integer pV, Integer pA, Integer pP, Integer dA, Point2D pos) {
+    public Monstre(int pV, int pA, int pP, int dA, Point2D pos) {
         this.ptVie = pV;
         this.pourcentageAtt = pA;
         this.pourcentagePar = pP;
@@ -36,27 +38,27 @@ public class Monstre {
     public Monstre() {
     }
 
-    public Integer getPtVie() {
+    public int getPtVie() {
         return ptVie;
     }
 
-    public void setPtVie(Integer value) {
+    public void setPtVie(int value) {
         this.ptVie = ptVie;
     }
 
-    public Integer getPourcentageAtt() {
+    public int getPourcentageAtt() {
         return pourcentageAtt;
     }
 
-    public void setPourcentageAtt(Integer value) {
+    public void setPourcentageAtt(int value) {
         this.pourcentageAtt = value;
     }
 
-    public Integer getPourcentagePar() {
+    public int getPourcentagePar() {
         return pourcentagePar;
     }
 
-    public void setPourcentagePar(Integer value) {
+    public void setPourcentagePar(int value) {
         this.pourcentagePar = value;
     }
     
@@ -64,19 +66,33 @@ public class Monstre {
         return degAtt;
     }
 
-    public void setDegAtt(Integer value) {
+    public void setDegAtt(int value) {
         this.degAtt = value;
     }
     
     public Point2D getPos() {
-        return new Point2D(pos);
+        return this.pos;
     }
 
     public void setPos(Point2D pos) {
         this.pos = new Point2D(pos);
     }
     
+    public void deplace() {
+        // déplace le monstre à un endroit aléatoire
+        Random generateurAleatoire = new Random();
+        
+        int entierAleaX = generateurAleatoire.nextInt(100);
+        int entierAleaY = generateurAleatoire.nextInt(100);           
+        Point2D position = new Point2D(entierAleaX, entierAleaY);
+        
+        this.setPos(position);
+    }
     
-    
-    
+    public void affiche(){
+        System.out.println("Le monstre a "+ this.ptVie+" points de vie et se situe en " + this.pos + ".");
+        System.out.println("Le monstre a un pourcentage d'attaque de "+ this.pourcentageAtt +"%.");
+        System.out.println("Le monstre a un pourcentage de parade de "+ this.pourcentageAtt +"%.");
+        System.out.println("Le monstre a "+ this.degAtt +"points d'attaque.");
+    }
 }

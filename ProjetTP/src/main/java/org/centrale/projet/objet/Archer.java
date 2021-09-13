@@ -12,9 +12,9 @@ package org.centrale.projet.objet;
 public class Archer extends Personnage {
     // Hérite de la classe Personnage
     
-    private Integer nbFleches;
+    private int nbFleches;
 
-    public Archer(String nom, Integer pV, Integer pA, Integer pP, Integer pM, Integer rM, Integer dA, Integer dM, Integer distMax, Point2D pos, Integer  nbF) {
+    public Archer(String nom, int pV, int pA, int pP, int pM, int rM, int dA, int dM, int distMax, Point2D pos, int  nbF) {
         super(nom, pV, 0, pA, pP, pM, rM, dA, dM, distMax, pos);   // On sous-entend que l'archer a 0 points de mana
         this.nbFleches = nbF;
     }
@@ -25,14 +25,20 @@ public class Archer extends Personnage {
     }
 
     public Archer() {
+        super();
     }
 
-    public Integer getNbFleches() {
+    public int getNbFleches() {
         return nbFleches;
     }
 
-    public void setNbFleches(Integer value) {
+    public void setNbFleches(int value) {
         this.nbFleches = value;
+    }
+    
+    public void affiche(){
+        super.affiche();
+        System.out.println(this.getNom() + " a " + this.nbFleches + " flèches.");
     }
     
     

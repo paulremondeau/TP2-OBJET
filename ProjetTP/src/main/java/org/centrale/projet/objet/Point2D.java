@@ -5,6 +5,7 @@
  */
 package org.centrale.projet.objet;
 
+
 /**
  *
  * @author bodet
@@ -15,8 +16,7 @@ public class Point2D {
     private int y;
     
     public Point2D() {
-        this.x = 0;
-        this.y = 0;
+        
     }
     
     public Point2D(int x, int y) {
@@ -59,4 +59,14 @@ public class Point2D {
         System.out.println("[" +  this.x + ";" + this.y + "]");
     }
     
+    public String toString(){
+        String res = "[" +  this.x + ";" + this.y + "]";
+        return res;
+    }
+    
+    public boolean equals(Point2D p){
+        
+        return ( (this.x == p.getX()) && this.y == p.getY());
+        
+    }
 }
