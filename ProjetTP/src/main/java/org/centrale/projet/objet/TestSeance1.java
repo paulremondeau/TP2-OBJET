@@ -27,8 +27,15 @@ public class TestSeance1 {
         
         monde.bug2.affiche();
         System.out.println("\n");
+
+        monde.robin.setNbFleches(monde.robin.getNbFleches()-2);
+        System.out.println(monde.robin.getNom()+" a utilisé 2 flèches.");
+        monde.robin.affiche();
+        System.out.println("\n");
         
-    }
-    
-    
+        monde.bug2.deplace();
+        System.out.println("le monstre s'est déplacé aléatoirement pour fuir robin.");
+        monde.bug2.affiche();
+        System.out.println("\n");
+    }   
 }

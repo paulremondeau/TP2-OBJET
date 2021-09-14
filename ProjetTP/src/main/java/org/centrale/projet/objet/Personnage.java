@@ -67,7 +67,7 @@ public class Personnage {
         this.ptVie = value;
     }
 
-    public Integer getPtVie() {
+    public int getPtVie() {
         return ptVie;
     }
 
@@ -75,7 +75,7 @@ public class Personnage {
         this.ptMana = value;
     }
 
-    public Integer getPtMana() {
+    public int getPtMana() {
         return ptMana;
     }
 
@@ -83,7 +83,7 @@ public class Personnage {
         this.pourcentageAtt = value;
     }
 
-    public Integer getPourcentageAtt() {
+    public int getPourcentageAtt() {
         return this.pourcentageAtt;
     }
 
@@ -91,7 +91,7 @@ public class Personnage {
         this.pourcentagePar = value;
     }
 
-    public Integer getPourcentagePar() {
+    public int getPourcentagePar() {
         return this.pourcentagePar;
     }
 
@@ -99,7 +99,7 @@ public class Personnage {
         this.pourcentageMag = value;
     }
 
-    public Integer getPourcentageMag() {
+    public int getPourcentageMag() {
         return this.pourcentageMag;
     }
 
@@ -107,31 +107,31 @@ public class Personnage {
         this.pourcentageResistMag = value;
     }
 
-    public Integer getPourcentageResistMag() {
+    public int getPourcentageResistMag() {
         return pourcentageResistMag;
     }
 
-    public Integer getDegAtt() {
+    public int getDegAtt() {
         return this.degAtt;
     }
 
-    public void setDegAtt(Integer value) {
+    public void setDegAtt(int value) {
         this.degAtt = value;
     }
 
-    public void setDegMag(Integer value) {
+    public void setDegMag(int value) {
         this.degMag = value;
     }
 
-    public Integer getDegMag() {
+    public int getDegMag() {
         return this.degMag;
     }
 
-    public void setDistAttMax(Integer value) {
+    public void setDistAttMax(int value) {
         this.distAttMax = value;
     }
 
-    public Integer getDistAttMax() {
+    public int getDistAttMax() {
         return this.distAttMax;
     }
 

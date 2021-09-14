@@ -35,6 +35,7 @@ public class World {
         int posPeonX = generateurAleatoire.nextInt(100);
         int posPeonY = generateurAleatoire.nextInt(100); 
         Point2D posPeon = new Point2D(posPeonX,posPeonY);
+        // Test pour avoir une distance de 5 au maximum
         while((Math.sqrt(Math.pow(posArcherX - posPeonX, 2) +Math.pow(posArcherY- posPeonY, 2))>5) || posArcher.equals(posPeon)){
             posPeonX = generateurAleatoire.nextInt(100);
             posPeonY = generateurAleatoire.nextInt(100); 

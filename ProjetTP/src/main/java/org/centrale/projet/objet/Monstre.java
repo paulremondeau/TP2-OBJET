@@ -62,7 +62,7 @@ public class Monstre {
         this.pourcentagePar = value;
     }
     
-    public Integer getDegAtt() {
+    public int getDegAtt() {
         return degAtt;
     }
 
@@ -93,6 +93,6 @@ public class Monstre {
         System.out.println("Le monstre a "+ this.ptVie+" points de vie et se situe en " + this.pos + ".");
         System.out.println("Le monstre a un pourcentage d'attaque de "+ this.pourcentageAtt +"%.");
         System.out.println("Le monstre a un pourcentage de parade de "+ this.pourcentageAtt +"%.");
-        System.out.println("Le monstre a "+ this.degAtt +"points d'attaque.");
+        System.out.println("Le monstre a "+ this.degAtt +" points d'attaque.");
     }
 }
